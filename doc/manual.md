@@ -10,7 +10,7 @@
 * **기술 스택**: 
   * 정적 사이트 생성기: **Hugo (v0.162.0)**
   * 프레임워크: **Hugo Blox Builder** (SaaS Landing Page 템플릿)
-  * 호스팅/배포: GitHub Pages
+  * 호스팅/배포: GitHub Pages (저장소: https://github.com/nutechmachineyang/bluesky.git)
 
 ---
 

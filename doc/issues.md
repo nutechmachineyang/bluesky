@@ -30,6 +30,11 @@
   * 루트 디렉토리의 [README.md](file:///c:/Users/nutec/OneDrive/Desktop/harryyang/README.md)에 문서 링크 추가 및 연동.
   * 프로젝트 전용 AI 규칙 파일([.agents/AGENTS.md](file:///c:/Users/nutec/OneDrive/Desktop/harryyang/.agents/AGENTS.md)) 생성 및 문서 자동 갱신 룰 추가.
 
+### [2026-07-16] GitHub 원격 저장소 연동 및 배포 환경 구성 (작업자: Antigravity AI)
+* **내용**:
+  * 원격 저장소 `https://github.com/nutechmachineyang/bluesky.git` 추가.
+  * [`config/_default/hugo.yaml`](file:///c:/Users/nutec/OneDrive/Desktop/harryyang/config/_default/hugo.yaml)의 `baseURL`을 `https://nutechmachineyang.github.io/bluesky/`로 수정하여 GitHub Pages 경로 오류 방지.
+
 ---
 
 ## 3. 작성 가이드

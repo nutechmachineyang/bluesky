@@ -1,4 +1,4 @@
-# [The Landing Page That Ships Before Your Competitor's](https://github.com/HugoBlox/hugo-theme-saas-landing-page)
+# [The Landing Page That Ships Before Your Competitor's](https://github.com/HugoBlox/hugo-theme-saas-landing-page) 
 
 [![Screenshot](.github/preview.webp)](https://hugoblox.com/templates/saas-landing-page?utm_source=github&utm_medium=readme&utm_content=preview)
 

@@ -5,7 +5,7 @@
 
 # Website name (set in params.yaml under hugoblox.branding.name)
 title: ''
-baseURL: 'https://nutechmachineyang.github.io/bluesky/' # Website URL
+baseURL: 'https://bluesky1.pages.dev/' # Website URL
 
 ############################
 ## PAGE OPTIONS

@@ -5,8 +5,8 @@
   "packageManager": "pnpm@10.14.0",
   "description": "Landing page starter template for Hugo Blox with Tailwind CSS v4",
   "scripts": {
-    "dev": "hugo server --disableFastRender",
-    "build": "hugo --minify && pnpm run pagefind",
+    "dev": "hugo server --disableFastRender -b http://localhost:1313/",
+    "build": "hugo --minify && npx pagefind --site public",
     "pagefind": "pagefind --site public"
   },
   "dependencies": {

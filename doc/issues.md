@@ -18,9 +18,35 @@
 * **현상**: 커스텀 CSS 작성 시 기존 TailwindCSS 스타일이나 Hugo Blox 테마 내장 스타일과 명칭이 겹쳐 레이아웃이 깨질 우려가 있습니다.
 * **해결책**: 커스텀 CSS 클래스는 고유의 접두사(예: `hy-`)를 붙여 작성하는 것을 권장합니다.
 
+### ⚠️ [이슈 04] 로컬 빌드 시 pnpm 명령어 실행 불가로 인한 빌드 실패
+* **현상**: `npm run build` 실행 시 내부적으로 `pnpm run pagefind`가 호출되나, 시스템에 `pnpm`이 글로벌하게 설치되어 있지 않은 경우 `'pnpm' is not recognized` 에러가 발생하여 빌드가 최종 실패합니다.
+* **해결책**: `package.json`의 빌드 스크립트 중 `pnpm run pagefind`를 `npx pagefind --site public` 또는 `npm run pagefind`로 변경하거나, 로컬 개발 환경에 `pnpm`을 글로벌로 설치(`npm install -g pnpm`)하여 해결해야 합니다.
+
+### ⚠️ [이슈 05] Cloudflare Pages 빌드 명령어 오타 (`--go` 플래그 오류)
+* **현상**: Cloudflare Pages 빌드 시 `Executing user command: hugo --go --minify`가 실행되며 `ERROR command error: unknown flag: --go` 에러로 빌드가 실패합니다.
+* **해결책**: Cloudflare Pages 대시보드의 Build command(빌드 명령어) 설정에서 오타 플래그인 `--go`를 제거/수정하거나, `npm run build` (또는 `pnpm run build`)로 변경해야 합니다. (Hugo 가비지 컬렉션 플래그는 `--gc`입니다.)
+
 ---
 
 ## 2. 프로젝트 변경 이력 (Changelog)
+
+### [2026-07-28] Cloudflare Pages 메인 도메인 설정에 따른 baseURL 업데이트 (작업자: Antigravity AI)
+* **내용**:
+  * [`config/_default/hugo.yaml`](file:///c:/Users/nutec/OneDrive/Desktop/harryyang/config/_default/hugo.yaml)의 `baseURL`을 `https://bluesky-pages.dev/`로 변경하여 Cloudflare Pages 배포 시 자원 로드 및 경로 이탈 현상 방지.
+
+### [2026-07-28] 로컬 개발 서버 스크립트 오버라이드 수정 (작업자: Antigravity AI)
+* **내용**:
+  * [package.json](file:///c:/Users/nutec/OneDrive/Desktop/harryyang/package.json)의 `dev` 스크립트에 `-b http://localhost:1313/` 옵션을 추가하여, 로컬 실행 시 GitHub Pages `baseURL` 경로(`/bluesky/`)로 인해 발생하던 404/자원 로드 문제 해결.
+
+### [2026-07-28] Cloudflare Pages 빌드 오류 원인 분석 및 이슈 기록 (작업자: Antigravity AI)
+* **내용**:
+  * Cloudflare Pages 빌드 로그 분석 결과, 빌드 명령어 내 존재하지 않는 `--go` 플래그 오타로 인한 실패 원인 규명.
+  * 해결 가이드 및 [issues.md](file:///c:/Users/nutec/OneDrive/Desktop/harryyang/doc/issues.md) 내 이슈 05 기록 추가.
+
+### [2026-07-28] 현재 상황 점검 및 빌드 스크립트 이슈 추가 (작업자: Antigravity AI)
+* **내용**:
+  * 현재 프로젝트 설정(hugo.yaml, params.yaml, menus.yaml, content/_index.md)의 적합성을 전반적으로 점검.
+  * 로컬 빌드 테스트 과정에서 발견된 `pnpm` 의존성 문제(이슈 04)를 `doc/issues.md`에 추가 기록.
 
 ### [2026-07-16] 초기 프로젝트 구성 및 매뉴얼 작성 (작업자: Antigravity AI)
 * **내용**:

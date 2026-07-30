@@ -10,7 +10,7 @@
 * **기술 스택**: 
   * 정적 사이트 생성기: **Hugo (v0.162.0)**
   * 프레임워크: **Hugo Blox Builder** (SaaS Landing Page 템플릿)
-  * 호스팅/배포: GitHub Pages (저장소: https://github.com/nutechmachineyang/bluesky.git)
+  * **호스팅/배포**: Cloudflare Pages / GitHub Pages (도메인: https://bluesky-pages.dev/, 저장소: https://github.com/nutechmachineyang/bluesky.git)
 
 ---
 
@@ -69,15 +69,20 @@ harryyang/
 * Node.js 설치
 
 ### 실행 명령어
-로컬에서 실시간 반영 서버를 띄워 확인하려면 아래 명령어를 사용합니다.
+로컬에서 실시간 반영 서버를 띄워 확인하려면 아래 명령어를 사용합니다. (기본 주소: `http://localhost:1313`)
+
 ```bash
-# 로컬 개발 서버 시작 (기본 주소: http://localhost:1313)
-hugo server
-```
-또는 npm 스크립트를 사용할 경우:
-```bash
+# npm 스크립트 실행 (Base URL 오버라이드가 적용되어 서브경로 없이 http://localhost:1313/으로 바로 접속 가능)
 npm run dev
 ```
+
+또는 CLI 명령어로 직접 실행할 경우:
+```bash
+hugo server --disableFastRender -b http://localhost:1313/
+```
+
+> 💡 **Windows PowerShell 권한 관련 팁**:
+> PowerShell에서 `npm run dev` 실행 시 스크립트 보안 정책 오류(`UnauthorizedAccess / PSSecurityException`)가 발생하는 경우, 터미널을 **CMD**로 전환하여 `cmd /c npm run dev`를 실행하거나 직접 `hugo server` 명령어를 입력하십시오.
 
 ---
 

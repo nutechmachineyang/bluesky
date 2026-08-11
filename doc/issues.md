@@ -30,6 +30,12 @@
 
 ## 2. 프로젝트 변경 이력 (Changelog)
 
+### [2026-08-11] 상단 네비게이션 '기술 칼럼' 메뉴 및 아티클 섹션 추가 (작업자: Antigravity AI)
+* **내용**:
+  * [`config/_default/menus.yaml`](file:///c:/Users/nutec/Desktop/harryyang/config/_default/menus.yaml)에 `기술 칼럼` (`/#blog`) 메인 메뉴 항목 신규 추가.
+  * [`content/_index.md`](file:///c:/Users/nutec/Desktop/harryyang/content/_index.md)에 블로그 포스트 수집 및 표시용 `collection` 블록 (`id: blog`) 추가.
+  * [`content/blog/aerodynamics-safety-guide/index.md`](file:///c:/Users/nutec/Desktop/harryyang/content/blog/aerodynamics-safety-guide/index.md) 샘플 기술 칼럼 작성 및 연결.
+
 ### [2026-07-28] Cloudflare Pages 메인 도메인 설정에 따른 baseURL 업데이트 (작업자: Antigravity AI)
 * **내용**:
   * [`config/_default/hugo.yaml`](file:///c:/Users/nutec/OneDrive/Desktop/harryyang/config/_default/hugo.yaml)의 `baseURL`을 `https://bluesky-pages.dev/`로 변경하여 Cloudflare Pages 배포 시 자원 로드 및 경로 이탈 현상 방지.

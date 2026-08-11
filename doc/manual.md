@@ -49,7 +49,7 @@ harryyang/
 ### B. 네비게이션 메뉴
 * **위치**: [`config/_default/menus.yaml`](file:///c:/Users/nutec/OneDrive/Desktop/harryyang/config/_default/menus.yaml)
 * **내용**: 
-  * 상단 네비게이션 바 링크 구성. `#top`, `#about`, `#projects`, `#career`, `#contact` 해시 링크를 통해 한 페이지 내에서 스크롤 이동하도록 설정되어 있습니다.
+  * 상단 네비게이션 바 링크 구성. `#top`, `#about`, `#projects`, `#career`, `#blog`, `#contact` 해시 링크를 통해 한 페이지 내에서 스크롤 이동하도록 설정되어 있습니다.
 
 ### C. 페이지 레이아웃 및 콘텐츠 편집
 * **위치**: [`content/_index.md`](file:///c:/Users/nutec/OneDrive/Desktop/harryyang/content/_index.md)
@@ -58,7 +58,15 @@ harryyang/
   2. **Features (`#about`)**: 주요 강점 3대 요소 소개 (공기역학, 안전 프로토콜, 기술 자문)
   3. **Features (`#projects`)**: Bento 그리드 형태의 포트폴리오 및 프로젝트 수행 실적
   4. **Steps (`#career`)**: 수평 타임라인 레이아웃 기반의 상세 핵심 스킬
-  5. **Markdown (`#contact`)**: 문의 접수를 위한 커스텀 HTML/CSS 폼 탑재
+  5. **Collection (`#blog`)**: 기술 칼럼 및 인사이트 아티클 모음 섹션
+  6. **Markdown (`#contact`)**: 문의 접수를 위한 커스텀 HTML/CSS 폼 탑재
+
+### D. 새로운 기술 글(블로그 칼럼) 지속적 작성/올리는 방법
+* **위치**: [`content/blog/`](file:///c:/Users/nutec/Desktop/harryyang/content/blog/)
+* **방법**: 
+  1. `content/blog/[포스트-폴더명]/index.md` 구조로 새로운 폴더 및 `index.md` 파일을 생성합니다.
+  2. YAML Frontmatter (`title`, `summary`, `date`, `authors`, `tags` 등)를 상단에 작성하고 하단에 마크다운 형식으로 내용을 작성합니다.
+  3. Git으로 push하면 메인 페이지의 **기술 칼럼** 섹션 및 `/blog/` 페이지에 자동으로 게시됩니다.
 
 ---
 

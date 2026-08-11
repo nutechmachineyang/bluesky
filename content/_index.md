@@ -122,6 +122,22 @@ sections:
       spacing:
         padding: ["6rem", 0, "6rem", 0]
 
+  - block: collection
+    id: blog
+    content:
+      title: 📝 기술 칼럼 & 인사이트
+      subtitle: Technical Articles
+      text: 항공 역학, 비행 안전, FDR 데이터 분석 관련 전문 칼럼과 정보입니다. 지속적으로 최신 기술 글이 업데이트됩니다.
+      filters:
+        folders:
+          - blog
+      count: 6
+    design:
+      columns: "2"
+      css_class: "bg-white dark:bg-gray-900"
+      spacing:
+        padding: ["6rem", 0, "6rem", 0]
+
   - block: markdown
     id: contact
     content:

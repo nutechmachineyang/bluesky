@@ -15,6 +15,9 @@ main:
   - name: 경력 및 기술
     url: /#career
     weight: 40
+  - name: 기술 칼럼
+    url: /#blog
+    weight: 45
   - name: 문의하기
     url: /#contact
     weight: 50
